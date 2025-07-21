@@ -84,18 +84,12 @@ export default function Navbar() {
               href={item.href}
               className={`
                 text-white text-lg relative group
-                ${activeItem === item.name ? 'font-light' : 'font-extrlight'}
+                ${activeItem === item.name ? 'font-normal' : 'font-extralight'}
                 transition-all duration-300 ease-in-out uppercase
               `}
               onClick={() => setActiveItem(item.name)}
             >
               {item.name}
-              <span className={`
-                absolute bottom-0 left-0 w-full h-0.5 bg-white
-                transform scale-x-0 group-hover:scale-x-100
-                ${activeItem === item.name ? 'scale-x-100' : ''}
-                transition-transform duration-300 ease-out origin-left
-              `}></span>
             </Link>
           ))}
         </div>
