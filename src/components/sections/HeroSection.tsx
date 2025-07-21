@@ -15,9 +15,6 @@ export default function HeroSection() {
           className="z-0"
         />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-green-200 opacity-50 z-10"></div>
-
         {/* Gradasi dari bagian atas (gambar) ke bagian bawah (putih) */}
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent z-20"></div>
       </div>
@@ -25,7 +22,7 @@ export default function HeroSection() {
       {/* Bagian Bawah: Copywriting Utama & CTA Buttons */}
       <div className="bg-white py-18 px-4 sm:px-6 lg:px-8 text-gray-800">
         <div className="container mx-auto max-w-4xl text-center">
-          <p className="text-lg leading-relaxed mb-8">
+          <p className="text-lg leading-relaxed mb-8 text-green-900">
             Aplikasi Audio Harian Islami untuk Reset Pikiran & Hati<br/>
             Membangun mental kuat & iman kokoh dalam <span className="font-bold">15 menit sehari</span>
           </p>
