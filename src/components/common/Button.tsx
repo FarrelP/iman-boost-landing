@@ -9,11 +9,11 @@ interface ButtonProps {
 
 export default function Button({ children, onClick, className, variant = 'primary' }: ButtonProps) {
   // Kelas dasar yang akan selalu diterapkan pada tombol
-  const baseClasses = "px-10 py-4 font-bold rounded-full shadow-lg transition duration-300 transform hover:scale-105 cursor-pointer";
+  const baseClasses = "px-10 py-4 font-semibold rounded-full shadow-lg transition duration-300 transform hover:scale-105 cursor-pointer";
 
   // Kelas spesifik untuk setiap varian desain
-  const primaryClasses = "bg-blue-700 text-white hover:bg-blue-800";
-  const secondaryClasses = "bg-white text-blue-700 hover:bg-blue-100";
+  const primaryClasses = "bg-gradient-to-r from-[#164d2e] to-[#006737] text-white hover:from-[#006737] hover:to-[#164d2e]";
+  const secondaryClasses = "bg-[#e1dada] text-black hover:bg-lime-100";
 
   // Pilih kelas varian berdasarkan prop 'variant'
   const variantClasses = variant === 'primary' ? primaryClasses : secondaryClasses;
