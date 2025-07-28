@@ -1,29 +1,30 @@
 // src/components/FormatSection.tsx
 import Image from 'next/image';
+import Button from '../common/Button';
 
 export default function FormatSection() {
   const formatItems = [
-    { name: 'Item 1', image: '/images/format-item-1.jpg' },
-    { name: 'Item 2', image: '/images/format-item-2.jpg' },
-    { name: 'Item 3', image: '/images/format-item-3.jpg' },
-    { name: 'Item 4', image: '/images/format-item-4.jpg' },
-    { name: 'Item 5', image: '/images/format-item-5.jpg' },
+    { name: "Audio Harian (affirmation + ayat qur'an + musik healing)", image: "/images/temp_placeholder_3d.webp" },
+    { name: "Habit Tracker", image: "/images/temp_placeholder_3d.webp" },
+    { name: "Kalender Spiritual", image: "/images/temp_placeholder_3d.webp" },
+    { name: "Premium Audio & Komunitas", image: "/images/temp_placeholder_3d.webp" },
+    { name: "Lifetime Access", image: "/images/temp_placeholder_3d.webp" },
   ];
 
   const pricing = {
-    amount: 'Rp 500.000',
+    amount: 'Idr 299.000',
     description: 'Harga spesial untuk akses penuh seumur hidup!',
   };
 
-  const commonItemClasses = "flex flex-col items-center text-center w-full max-w-[150px] sm:max-w-[180px]";
-  const commonImageClasses = "rounded-xl object-cover w-full h-[150px] sm:h-[180px] mb-4 shadow-md";
-  const commonNameTagClasses = "bg-white text-gray-800 px-4 py-2 rounded-lg shadow-sm font-medium whitespace-nowrap";
+  const commonItemClasses = "flex flex-col items-center text-center w-full max-w-[150px] sm:max-w-[240px]";
+  const commonImageClasses = "rounded-xl object-cover w-full h-[150px] sm:h-[180px] mb-4";
+  const commonNameTagClasses = "bg-white text-green-900 px-4 py-2 rounded-lg shadow-sm font-medium w-full";
 
   return (
     <section className="relative bg-white py-16 px-4 sm:px-6 lg:px-8">
       {/* Main Card */}
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="bg-gray-100 rounded-lg shadow-xl p-6 sm:p-8 lg:p-10">
+        <div className="bg-[#efe9e9] rounded-lg shadow-xl p-6 sm:p-8 lg:p-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">Pilih Format yang Anda Inginkan</h2>
 
           {/* Bagian Item untuk Tampilan MOBILE (<= md) */}
@@ -62,7 +63,7 @@ export default function FormatSection() {
           {/* Bagian Item untuk Tampilan DESKTOP (>= md) */}
           <div className="hidden md:flex flex-col items-center"> {/* Hidden on less than md */}
             {/* Baris Desktop 1: Item 1, 2, 3 */}
-            <div className="grid grid-cols-3 gap-8 mb-8 justify-items-center w-full">
+            <div className="grid grid-cols-3 gap-1 mb-8 justify-items-center w-full">
               {formatItems.slice(0, 3).map((item, index) => (
                 <div key={`desktop-${index}`} className={commonItemClasses}>
                   <Image src={item.image} alt={item.name} width={180} height={180} className={commonImageClasses.replace('h-[150px] sm:h-[180px]', 'h-[180px]')} />
@@ -72,7 +73,7 @@ export default function FormatSection() {
             </div>
 
             {/* Baris Desktop 2: Item 4, 5 */}
-            <div className="grid grid-cols-2 gap-8 justify-items-center w-full max-w-[400px]"> {/* Add max-width to center 2 items in 3-col desktop layout */}
+            <div className="grid grid-cols-2 gap-8 justify-items-center w-full max-w-[512px]"> {/* Add max-width to center 2 items in 3-col desktop layout */}
               {formatItems.slice(3, 5).map((item, index) => (
                 <div key={`desktop-${index + 3}`} className={commonItemClasses}>
                   <Image src={item.image} alt={item.name} width={180} height={180} className={commonImageClasses.replace('h-[150px] sm:h-[180px]', 'h-[180px]')} />
@@ -87,15 +88,16 @@ export default function FormatSection() {
 
       {/* Pricing Section */}
       <div className="container mx-auto max-w-6xl mt-16 text-center relative z-10">
-        <h3 className="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-4">{pricing.amount}</h3>
-        <p className="text-xl text-gray-700 mb-8">{pricing.description}</p>
-        <button className="px-10 py-4 bg-blue-700 text-white font-bold rounded-full shadow-lg hover:bg-blue-800 transition duration-300 transform hover:scale-105">
+        <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">Mulai sekarang</h3>
+        <div className="border border-green-900 mb-4 w-fit px-16 m-auto p-4 rounded-lg">
+          <p className="text-2xl text-black mb-1">Lifetime Access</p>
+          <p className="text-xl text-black font-bold">{pricing.amount}</p>
+        </div>
+        <p className="text-lg text-black mb-1 lg:w-[42rem] md:w-[38rem] sm:w-[10rem] mx-auto mb-4">Setelah langganan anda hanya membayar Rp.299.000,00 untuk menikmati semua produk audio iman boost. Syarat & Ketentuan | Batalkan kapan saja</p>
+        <Button className="lg:w-[18rem] md:w-[14rem] sm:w-[10rem] mb-4" variant="primary">
           Bayar Sekarang
-        </button>
+        </Button>
       </div>
-
-      {/* GRADASI DI BAWAH PRICING KE GAMBAR FULL SIZE */}
-      <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-white z-0"></div>
     </section>
   );
 }

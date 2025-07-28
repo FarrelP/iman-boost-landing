@@ -8,7 +8,7 @@ interface CardProps {
 }
 
 export default function Card({ children, className, titleString, variant }: CardProps) {
-  const baseClasses = "bg-gray-100 shadow-xl";
+  const baseClasses = "bg-[#efe9e9] shadow-xl";
   
   const baseTitleClasses = "w-fit mx-auto text-center font-semibold rounded-lg shadow-md";
   const primaryTitleClasses = "-mt-16 mb-8 px-6 py-3 bg-gradient-to-r from-[#164d2e] to-[#006737] text-white";
