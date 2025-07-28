@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function FooterSection() {
   return (
-    <footer className="bg-green-800 text-white py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-green-900 text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
           {/* Bagian 1: Logo */}

@@ -1,4 +1,3 @@
-// src/components/FAQSection.tsx
 'use client'; // Penting: Tambahkan ini untuk menggunakan useState dan interaktivitas klien
 
 import React, { useState } from 'react';
@@ -6,26 +5,63 @@ import React, { useState } from 'react';
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null); // State untuk melacak FAQ mana yang terbuka
 
+  
+  const faqHTML = ``
+
   const faqs = [
     {
-      question: 'Apa itu Produk Unggulan Anda?',
-      answer: 'Produk Unggulan kami adalah solusi inovatif yang dirancang untuk meningkatkan efisiensi operasional dan memberikan pengalaman pengguna yang tak tertandingi. Kami fokus pada teknologi terkini untuk memenuhi kebutuhan pasar yang dinamis.',
+      question: 'Mengapa Brain Boost Muslim?',
+      answer: 
+        <>
+        <p className="text-black uppercase">Muslim butuh solusi mental dan spiritualis yang relevan</p>
+        <p className="text-black mb-0 uppercase">Data :</p>
+        <ul className="list-disc text-black pl-6">
+          <li>78% masyarakat Indonesia mengalami gangguan psikologis ringan-sedang pasca pandemi (Kemenkes, 2022)</li>
+          <li>79% Gen Z Muslim mengaku sering overthinking, insecure, dan merasa jauh dari Allah.</li>
+        </ul>
+        <p className="text-black">(Sumber: Populix Research on Gen Z & Mental Wellness, 2023)</p>
+        </>
+      ,
     },
     {
-      question: 'Bagaimana cara mendaftar atau membeli produk?',
-      answer: 'Anda dapat mendaftar atau membeli produk kami dengan mudah melalui halaman pricing. Ikuti langkah-langkah yang tertera, dan tim kami akan memandu Anda melalui proses aktivasi.',
+      question: 'Kenapa Iman Boost Berdurasi 15 Menit?',
+      answer: 
+        <>
+        <p className="text-black uppercase">Dirancang untuk konsistensi, bukan sekedar konsumsi.</p>
+        <ul className="list-disc text-black pl-6">
+          <li>Target utama kami adalah Daily Active Users (DAU), bukan sekedar download tinggi di awal.</li>
+          <li>Data dari aplikasi global seperti Headspace dan Fabulous menunjukkan bahwa durasi ideal konten harian adalah 10-20 menit, karena pengguna cenderung konsisten pada format singkat (micro-habit).</li>
+          <li>Kami menerapkan insigt ini untuk pengguna Muslim yang ingin meningkatkan spiritualitas tanpa beban waktu</li>
+        </ul><br />
+        <p className="text-black uppercase">Efektif dan relevan dengan kehidupan muslim.</p>
+        <ul className="list-disc text-black pl-6">
+          <li>Format 15 menit kami menggambungkan affirmasi Qur'ani, tafsir sederhana, dan refleksi terarah dalam satu sesi.</li>
+          <li>Cukup padat untuk memberikan dampak, namun ringan untuk diulang setiap hari. Tidak mengganggu ritme ibadah utama, justru memperkuatnya.</li>
+        </ul><br />
+        <p className="text-black uppercase">Sesuai momen spiritualis.</p>
+        <ul className="list-disc text-black pl-6">
+          <li>Disarankan didengarkan setelah Subuh, Zuhur, atau Magrib—momen dimana mental sedang segar atau butuh "recharge".</li>
+          <li>Format ini mudah diintegrasikan ke kehidupan sehari-hari pengguna Muslim aktif, terutama Gen Z & Milenia.</li>
+        </ul>
+        </>
+      ,
     },
     {
-      question: 'Apakah ada dukungan teknis yang tersedia?',
-      answer: 'Tentu saja! Kami menyediakan dukungan teknis 24/7 melalui email, chat, dan telepon. Tim ahli kami siap membantu Anda dengan segala pertanyaan atau masalah yang mungkin Anda hadapi.',
-    },
-    {
-      question: 'Apakah produk ini kompatibel dengan semua perangkat?',
-      answer: 'Produk kami dirancang dengan fleksibilitas tinggi dan kompatibel dengan berbagai perangkat modern, termasuk desktop, laptop, tablet, dan smartphone. Anda dapat mengaksesnya kapan saja dan di mana saja.',
-    },
-    {
-      question: 'Bisakah saya mendapatkan demo gratis?',
-      answer: 'Kami tidak menyediakan demo gratis secara publik, tetapi tim sales kami dapat memberikan presentasi produk personal yang disesuaikan dengan kebutuhan spesifik Anda. Silakan hubungi kami untuk menjadwalkan demo.',
+      question: 'Kenapa bukan untuk tidur (Sleep Mode)?',
+      answer: 
+      <>
+      <p className="text-black uppercase">Karena kami membangun MVP dengan fokus dan diferensiasi yang jelas.</p>
+      <p className="text-black mb-0 uppercase">Konten tidur perlu format khusus</p>
+      <ul className="list-disc text-black pl-6">
+          <li>Audio tidur Islami yang efektif membutuhkan pendekatan berbeda: lebih panjang, repetitif, dengan suara alam dan dzikir lembut.</li>
+          <li>Kami melihatnya sebagai produk lanjutan (Sleep Therapy Series) yang akan dirilis setelah MVP sukses.</li>
+        </ul><br />
+        <p className="text-black uppercase">Faktor syariah & psikologis.</p>
+        <ul className="list-disc text-black pl-6">
+          <li>Banyak Muslim merasa tidak nyaman mendengarkanaduio Qur'an saat tidur, karena dianggap kurang sopan (meskipun ada perbedaan pendapat dalam fiqh).</li>
+          <li>Maka, kami menjadikannya fitur tambahan berbasis preferensi personal, bukan pengalaman utama.</li>
+        </ul><br />
+      </>,
     },
   ];
 
@@ -39,7 +75,7 @@ export default function FAQSection() {
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">
           Pertanyaan yang Sering Diajukan
         </h2>
-        <div className="border-b border-gray-300"> {/* Border bawah untuk FAQ terakhir */}
+        <div className="border-b border-black"> {/* Border bawah untuk FAQ terakhir */}
           {faqs.map((faq, index) => (
             <div key={index} className="border-t border-black py-6"> {/* Border top hitam untuk setiap FAQ */}
               <button
@@ -66,7 +102,7 @@ export default function FAQSection() {
                 </svg>
               </button>
               {openIndex === index && (
-                <div className="mt-4 text-gray-600 leading-relaxed pr-8">
+                <div className="mt-1 text-gray-600 leading-relaxed pr-8">
                   <p>{faq.answer}</p>
                 </div>
               )}
