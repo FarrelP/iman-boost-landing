@@ -35,12 +35,12 @@ export default function FAQSection() {
         </ul><br />
         <p className="text-black uppercase">Efektif dan relevan dengan kehidupan muslim.</p>
         <ul className="list-disc text-black pl-6">
-          <li>Format 15 menit kami menggambungkan affirmasi Qur'ani, tafsir sederhana, dan refleksi terarah dalam satu sesi.</li>
+          <li>Format 15 menit kami menggambungkan affirmasi Qur&apos;ani, tafsir sederhana, dan refleksi terarah dalam satu sesi.</li>
           <li>Cukup padat untuk memberikan dampak, namun ringan untuk diulang setiap hari. Tidak mengganggu ritme ibadah utama, justru memperkuatnya.</li>
         </ul><br />
         <p className="text-black uppercase">Sesuai momen spiritualis.</p>
         <ul className="list-disc text-black pl-6">
-          <li>Disarankan didengarkan setelah Subuh, Zuhur, atau Magrib—momen dimana mental sedang segar atau butuh "recharge".</li>
+          <li>Disarankan didengarkan setelah Subuh, Zuhur, atau Magrib—momen dimana mental sedang segar atau butuh &quot;recharge&quot;.</li>
           <li>Format ini mudah diintegrasikan ke kehidupan sehari-hari pengguna Muslim aktif, terutama Gen Z & Milenia.</li>
         </ul>
         </>
@@ -58,7 +58,7 @@ export default function FAQSection() {
         </ul><br />
         <p className="text-black uppercase">Faktor syariah & psikologis.</p>
         <ul className="list-disc text-black pl-6">
-          <li>Banyak Muslim merasa tidak nyaman mendengarkanaduio Qur'an saat tidur, karena dianggap kurang sopan (meskipun ada perbedaan pendapat dalam fiqh).</li>
+          <li>Banyak Muslim merasa tidak nyaman mendengarkan audio Qur&apos;an saat tidur, karena dianggap kurang sopan (meskipun ada perbedaan pendapat dalam fiqh).</li>
           <li>Maka, kami menjadikannya fitur tambahan berbasis preferensi personal, bukan pengalaman utama.</li>
         </ul><br />
       </>,
