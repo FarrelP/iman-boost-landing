@@ -103,7 +103,8 @@ export default function FAQSection() {
               </button>
               {openIndex === index && (
                 <div className="mt-1 text-gray-600 leading-relaxed pr-8">
-                  <p>{faq.answer}</p>
+                  {/* <p>{faq.answer}</p> */}
+                  <>{faq.answer}</>
                 </div>
               )}
             </div>
