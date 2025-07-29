@@ -55,6 +55,7 @@ export default function ProductSection() {
                   height={200}
                   className="rounded-3xl object-cover w-full h-full"
                   style={borderImageStyle}
+                  unoptimized
                 />
               </Card>
             ))}

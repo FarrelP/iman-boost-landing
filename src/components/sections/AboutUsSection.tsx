@@ -33,6 +33,7 @@ export default function AboutUsSection() {
                 height={300}
                 className="shadow-lg object-cover w-[23rem] h-auto max-h-80 md:max-h-96"
                 style={{ borderRadius: '50% 50% 0 0', border: '1rem #c8bebe solid', borderBottom: 'none' }}
+                unoptimized
               />
             </div>
           </div>

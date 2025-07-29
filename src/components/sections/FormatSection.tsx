@@ -33,7 +33,7 @@ export default function FormatSection() {
             <div className="grid grid-cols-2 gap-8 mb-8 justify-items-center w-full">
               {formatItems.slice(0, 2).map((item, index) => (
                 <div key={`mobile-${index}`} className={commonItemClasses}>
-                  <Image src={item.image} alt={item.name} width={150} height={150} className={commonImageClasses} />
+                  <Image src={item.image} alt={item.name} width={150} height={150} className={commonImageClasses} unoptimized />
                   <div className={commonNameTagClasses}>{item.name}</div>
                 </div>
               ))}
@@ -43,7 +43,7 @@ export default function FormatSection() {
             <div className="grid grid-cols-2 gap-8 mb-8 justify-items-center w-full">
               {formatItems.slice(2, 4).map((item, index) => (
                 <div key={`mobile-${index + 2}`} className={commonItemClasses}>
-                  <Image src={item.image} alt={item.name} width={150} height={150} className={commonImageClasses} />
+                  <Image src={item.image} alt={item.name} width={150} height={150} className={commonImageClasses} unoptimized />
                   <div className={commonNameTagClasses}>{item.name}</div>
                 </div>
               ))}
@@ -53,7 +53,7 @@ export default function FormatSection() {
             <div className="flex justify-center w-full">
               {formatItems.slice(4, 5).map((item, index) => (
                 <div key={`mobile-${index + 4}`} className={commonItemClasses}>
-                  <Image src={item.image} alt={item.name} width={150} height={150} className={commonImageClasses} />
+                  <Image src={item.image} alt={item.name} width={150} height={150} className={commonImageClasses} unoptimized />
                   <div className={commonNameTagClasses}>{item.name}</div>
                 </div>
               ))}
@@ -66,7 +66,7 @@ export default function FormatSection() {
             <div className="grid grid-cols-3 gap-1 mb-8 justify-items-center w-full">
               {formatItems.slice(0, 3).map((item, index) => (
                 <div key={`desktop-${index}`} className={commonItemClasses}>
-                  <Image src={item.image} alt={item.name} width={180} height={180} className={commonImageClasses.replace('h-[150px] sm:h-[180px]', 'h-[180px]')} />
+                  <Image src={item.image} alt={item.name} width={180} height={180} className={commonImageClasses.replace('h-[150px] sm:h-[180px]', 'h-[180px]')} unoptimized />
                   <div className={commonNameTagClasses}>{item.name}</div>
                 </div>
               ))}
@@ -76,7 +76,7 @@ export default function FormatSection() {
             <div className="grid grid-cols-2 gap-8 justify-items-center w-full max-w-[512px]"> {/* Add max-width to center 2 items in 3-col desktop layout */}
               {formatItems.slice(3, 5).map((item, index) => (
                 <div key={`desktop-${index + 3}`} className={commonItemClasses}>
-                  <Image src={item.image} alt={item.name} width={180} height={180} className={commonImageClasses.replace('h-[150px] sm:h-[180px]', 'h-[180px]')} />
+                  <Image src={item.image} alt={item.name} width={180} height={180} className={commonImageClasses.replace('h-[150px] sm:h-[180px]', 'h-[180px]')} unoptimized />
                   <div className={commonNameTagClasses}>{item.name}</div>
                 </div>
               ))}

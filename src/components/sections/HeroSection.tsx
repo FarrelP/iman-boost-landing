@@ -13,6 +13,7 @@ export default function HeroSection() {
           objectFit="cover"
           quality={100}
           className="z-0"
+          unoptimized
         />
 
         {/* Gradasi dari bagian atas (gambar) ke bagian bawah (putih) */}

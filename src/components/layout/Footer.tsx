@@ -15,6 +15,7 @@ export default function FooterSection() {
               width={150} // Sesuaikan ukuran logo
               height={50} // Sesuaikan ukuran logo
               className="mb-4"
+              unoptimized
             />
             <p className="text-sm text-gray-300">
               Visi kami adalah menjadi penyedia solusi teknologi terkemuka, menciptakan dampak positif bagi bisnis dan masyarakat.
@@ -36,10 +37,10 @@ export default function FooterSection() {
             <h3 className="text-xl font-semibold mb-4">Ikuti Kami</h3>
             <div className="flex space-x-4">
               <Link href="https://instagram.com/your-instagram" target="_blank" rel="noopener noreferrer">
-                <Image src="/icons/instagram.svg" alt="Instagram" width={32} height={32} />
+                <Image src="/icons/instagram.svg" alt="Instagram" width={32} height={32} unoptimized />
               </Link>
               <Link href="https://tiktok.com/@your-tiktok" target="_blank" rel="noopener noreferrer">
-                <Image src="/icons/tiktok.svg" alt="TikTok" width={32} height={32} />
+                <Image src="/icons/tiktok.svg" alt="TikTok" width={32} height={32} unoptimized />
               </Link>
               {/* Tambahkan ikon media sosial lain jika diperlukan */}
             </div>
