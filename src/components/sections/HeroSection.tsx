@@ -7,7 +7,7 @@ export default function HeroSection() {
       <div className="relative h-[58vh] min-h-[300px] flex items-center justify-center text-center text-white overflow-hidden">
         {/* Background Image */}
         <Image
-          src="/images/background_desktop.webp"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/background_desktop.webp`}
           alt="Hero Background"
           layout="fill"
           objectFit="cover"

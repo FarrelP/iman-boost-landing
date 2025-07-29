@@ -27,7 +27,7 @@ export default function AboutUsSection() {
 
             <div className="md:w-1/2 flex justify-center items-center">
               <Image
-                src="/images/temp_placeholder.webp"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/temp_placeholder.webp`}
                 alt="Tentang Produk"
                 width={300}
                 height={300}

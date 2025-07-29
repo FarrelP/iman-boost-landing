@@ -49,7 +49,7 @@ export default function ProductSection() {
                 variant="secondary"
               >
                 <Image
-                  src={item.imageSrc}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${item.imageSrc}`}
                   alt={item.altText}
                   width={300}
                   height={200}
