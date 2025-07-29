@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://farrelp.github.io/iman-boost-landing",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
