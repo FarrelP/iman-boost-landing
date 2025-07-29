@@ -5,9 +5,6 @@ import React, { useState } from 'react';
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null); // State untuk melacak FAQ mana yang terbuka
 
-  
-  const faqHTML = ``
-
   const faqs = [
     {
       question: 'Mengapa Brain Boost Muslim?',
