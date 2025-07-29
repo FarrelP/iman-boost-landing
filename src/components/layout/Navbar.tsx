@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -43,7 +44,14 @@ export default function Navbar() {
           setActiveItem('Home');
           setIsMobileMenuOpen(false); // Tutup menu mobile saat klik logo
         }}>
-          YourLogo
+          <Image
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logo_dark-theme.svg`}
+            alt="Nama Perusahaan Logo"
+            width={150}
+            height={50}
+            className="mb-4"
+            unoptimized
+          />
         </Link>
 
         {/* Hamburger Menu Button (visible on small screens) */}

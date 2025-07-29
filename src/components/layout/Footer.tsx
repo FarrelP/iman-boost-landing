@@ -1,4 +1,3 @@
-// src/components/FooterSection.tsx
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,10 +9,10 @@ export default function FooterSection() {
           {/* Bagian 1: Logo */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-1/3">
             <Image
-              src="/images/your-logo.png" // Ganti dengan path logo Anda
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logo_dark-theme.svg`}
               alt="Nama Perusahaan Logo"
-              width={150} // Sesuaikan ukuran logo
-              height={50} // Sesuaikan ukuran logo
+              width={150}
+              height={50}
               className="mb-4"
               unoptimized
             />
@@ -35,14 +34,15 @@ export default function FooterSection() {
           {/* Bagian 3: Social Media */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-1/3">
             <h3 className="text-xl font-semibold mb-4">Ikuti Kami</h3>
-            <div className="flex space-x-4">
-              <Link href="https://instagram.com/your-instagram" target="_blank" rel="noopener noreferrer">
-                <Image src="/icons/instagram.svg" alt="Instagram" width={32} height={32} unoptimized />
+            <div className="flex flex-col space-y-4">
+              <Link href="https://instagram.com/Official.Imanboost" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/icon_instagram.png`} alt="Instagram" style={{ width: '2rem' }} width={32} height={32} unoptimized />
+                <span className="text-white">Official.Imanboost</span>
               </Link>
-              <Link href="https://tiktok.com/@your-tiktok" target="_blank" rel="noopener noreferrer">
-                <Image src="/icons/tiktok.svg" alt="TikTok" width={32} height={32} unoptimized />
+              <Link href="https://tiktok.com/@Official.Imanboost" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-5">
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/icon_tiktok.png`} alt="TikTok" style={{ width: '1.4rem' }} width={32} height={32} unoptimized />
+                <span className="text-white">Official.Imanboost</span>
               </Link>
-              {/* Tambahkan ikon media sosial lain jika diperlukan */}
             </div>
           </div>
         </div>
